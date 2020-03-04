@@ -61,7 +61,6 @@
 
 <style lang="scss">
 
-  /*@import "style/index";*/
   *{
     margin: 0;
     padding: 0;
