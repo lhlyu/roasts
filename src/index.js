@@ -1,11 +1,26 @@
-import Roasts from './packages/roasts/index'
+import RailBoard from './components/rail/board'
+import RailComment from './components/rail/comment'
 
-// 支持<script>引入
-if (typeof  window !== "undefined" && window.Vue){
-  window.Vue.component(Roasts.name, Roasts)
+const components = [
+    RailBoard,
+    RailComment
+]
+
+const install = Vue => {
+    if(install.installed){
+        return
+    }
+    components.map(c => {
+        Vue.component(c.name,c)
+    })
 }
 
-// 支持Vue全局安装
-Roasts.install = Vue => Vue.component(Roasts.name,Roasts)
+if(typeof window !== 'undefined' && window.Vue){
+    install(window.Vue)
+}
 
-export default Roasts
+export default {
+    install,
+    RailBoard,
+    RailComment
+}

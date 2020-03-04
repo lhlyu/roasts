@@ -1,0 +1,28 @@
+
+@mixin cursor {
+  cursor: url('../assets/cursor/cursor.png'), auto !important;
+}
+
+@mixin cursor-link {
+  cursor: url('../assets/cursor/cursor_link.png'), auto !important;
+}
+
+// 给属性加上浏览器识别标志
+@mixin prefix($stylename, $value, $options: webkit moz o ms) {
+  #{$stylename}: $value;
+
+  @each $option in $options {
+    @if $option == webkit {
+      -webkit-#{$stylename}: $value;
+    }
+    @else if $option == moz {
+      -moz-#{$stylename}: #{$value};
+    }
+    @else if $option == o {
+      -o-#{$stylename}: #{$value};
+    }
+    @else if $option == ms {
+      -ms-#{$stylename}: #{$value};
+    }
+  }
+}

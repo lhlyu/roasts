@@ -1,0 +1,60 @@
+
+
+.#{$prefix}-reset{
+  --themeColor: #{$themeColor};
+  --themeBg: #{rgba(#ffffff,0.65)};
+  --selectBg: rgba($themeColor,0.65);
+}
+
+
+.#{$prefix}{
+
+  @include cursor;
+  color: $fontColor;
+
+  *{
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: rgba($themeColor,0.55);
+    color: #fff;
+  }
+
+
+
+  .#{$prefix}-theme-color{
+    color: var(--themeColor);
+  }
+  .#{$prefix}-theme-bg{
+    background: var(--themeColor) !important;
+    color: white;
+  }
+  .#{$prefix}-right{
+    float: right;
+  }
+  .#{$prefix}-btn{
+    padding: 0.75em 1.25em;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid var(--themeColor);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.75em;
+    background: transparent;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.24);
+    &:active{
+      background-color: var(--themeColor);
+      color: white;
+    }
+  }
+
+  a{
+    @include cursor-link;
+    text-decoration:none;
+    color: var(--themeColor);
+  }
+}

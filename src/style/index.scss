@@ -1,14 +1,6 @@
-@import './variables';
-@import './mixin';
-@import './function';
+@import 'variables';
+@import 'mixin';
+@import 'function';
+@import 'base';
 
-
-.roasts-reset{
-  --themeColor: default;
-}
-
-a,p{
-  text-decoration:none;
-  color: var(--themeColor);
-  font-size: 20px;
-}
+@import 'rail/index';
