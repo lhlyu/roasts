@@ -1,6 +1,6 @@
 {
   "name": "roasts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "组件测试",
   "main": "lib/roasts.umd.min.js",
   "keyword": "roasts",
@@ -10,7 +10,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lib": "vue-cli-service build --target lib --name roasts --dest lib src/index.js",
-    "css": "vue-cli-service build --target lib --name roasts --dest lib src/style/index.scss"
+    "css": "vue-cli-service build --target lib --name roasts --dest static src/style/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",
