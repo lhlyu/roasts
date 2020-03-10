@@ -1,3 +1,5 @@
+import './style/index.scss'
+
 import RailBoard from './components/rail/board'
 import RailComment from './components/rail/comment'
 
